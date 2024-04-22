@@ -1,0 +1,93 @@
+
+body {
+    margin: 0;
+    background-image: url("ceu.jpg");
+    background-position: center;
+    background-size: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    position: center;
+    top: 50vh;
+    left: 50vw;
+    width: 500px; 
+    height: 500px;
+    animation: terra-orbita 20s linear infinite;
+}
+
+.sol {
+    position: absolute;
+    width: 13vw;
+    height: 27.5vh;
+    background-image: url("sol.gif");
+    background-position: center;
+    background-size: 54vh;
+    border-radius: 50%;
+    box-shadow: 0 0 5vw white;
+}
+
+.terra {
+    position: absolute;
+    left: 25vw;
+    width: 4vw;
+    height: 8.5vh;
+    background-image: url("terra.gif");
+    background-position: center;
+    background-size: 10vh;
+    border-radius: 50%;
+    box-shadow: 0 0 1vw white;
+    animation: terra-orbita2 20s linear infinite;
+}
+
+.pseudoterra {
+    position: absolute;
+    left: 25vw;
+    width: 4vw;
+    height: 8.5vh;
+    border-radius: 50%;
+    animation: lua-orbita 2s linear infinite;
+}
+
+.lua {
+    position: relative;
+    left: 6vw;
+    width: 1vw;
+    height: 2vh;
+    background-image: url("lua.jpg");
+    background-position: center;
+    background-size: 2vh;
+    background-color: silver;
+    border-radius: 50%;
+}
+
+@keyframes terra-orbita {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes terra-orbita2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes lua-orbita {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
